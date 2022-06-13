@@ -21,15 +21,14 @@ app.post("/upload", multer({ storage: storage }).single("file"), (req, res) => {
     return res.status(200).json({
       response: {
         msg: "file uploaded",
-        imageUrl: req.file.filename,
+        imageUrl: `/image/${req.file.filename}`,
       },
     });
   }
 });
 
 app.get("/image/:image", (req, res) => {
-  console.log(req.params.image);
-  res.sendFile(`uploads/${req.params.image}`);
+  res.sendFile(__dirname + `/uploads/${req.params.image}`);
 });
 
 app.listen(8080, () => {
