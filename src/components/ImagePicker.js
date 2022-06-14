@@ -40,7 +40,6 @@ function ImagePicker({ setImageUrl, setLoader }) {
       await axios
         .post("https://img-uploader-api.herokuapp.com/upload", formData)
         .then((res) => {
-          console.log(res);
           res.data.response.msg === "file uploaded" &&
             setImageUrl(res.data.response.imageUrl);
           res.data.response.msg === "No file uploaded" &&
