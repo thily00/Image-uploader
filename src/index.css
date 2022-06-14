@@ -8,31 +8,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-p {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  text-align: center;
-  letter-spacing: -0.035em;
-  color: #bdbdbd;
-  cursor: default;
-}
-
-button {
-  background: #2f80ed;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-button:hover {
-  background: #0b5cc9;
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .uploader {
@@ -122,6 +104,33 @@ button:hover {
 
 .checkIcon {
   width: 36px;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.035em;
+  color: #bdbdbd;
+  cursor: default;
+}
+
+button {
+  background: #2f80ed;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #0b5cc9;
 }
 
 .left {

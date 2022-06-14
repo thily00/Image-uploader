@@ -3,8 +3,6 @@ import ImageUploader from "./components/ImageUploader";
 import UploadedImage from "./components/UploadedImage";
 import { Toaster } from "react-hot-toast";
 
-import "./App.css";
-
 function App() {
   const [imageUrl, setImageUrl] = useState(null);
 
