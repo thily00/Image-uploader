@@ -66,7 +66,8 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 <!-- Example: -->
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) and
+ the application [API](https://github.com/thily00/Image-uploader-api) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
@@ -74,6 +75,11 @@ $ git clone https://github.com/your-user-name/your-project-name
 
 # Install dependencies
 $ npm install
+
+# add .env file in the root of your project:
+
+# put your API URL on .env file like below
+$ REACT_APP_BACKEND_URL = 'https://yourdomainename.com'
 
 # Run the app
 $ npm start
