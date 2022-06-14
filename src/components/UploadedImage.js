@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import checkicon from "../assets/check-icon.jpg";
+import showMessage from "../components/ShowMessage";
 
 function UploadedImage({ imageUrl }) {
   const uri = `http://localhost:8080${imageUrl}`;
@@ -12,11 +14,11 @@ function UploadedImage({ imageUrl }) {
 
   return (
     <>
+      <img src={checkicon} className="checkIcon" alt="check icon" />
       <h1 className="uploader__title">Uploaded Successfully!</h1>
       <img src={uri} className="uploaded__image" alt="uploaded" />
-
       <div className="imageurl">
-        <input type="text" value={uri} />
+        <input type="text" defaultValue={uri} />
         <button ref={copyButton}>Copy Link</button>
       </div>
     </>

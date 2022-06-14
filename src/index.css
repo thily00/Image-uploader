@@ -15,7 +15,7 @@ p {
   text-align: center;
   letter-spacing: -0.035em;
   color: #bdbdbd;
-  cursor: auto;
+  cursor: default;
 }
 
 button {
@@ -48,6 +48,7 @@ button:hover {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  cursor: default;
 }
 
 .uploader__title {
@@ -72,7 +73,7 @@ button:hover {
   height: 218.9px;
 }
 .drag-area.active {
-  background-color: #e9ecef;
+  border: 1px dashed #1e4e91;
 }
 
 .drag-area img {
@@ -113,4 +114,16 @@ button:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.imageurl input:focus-visible {
+  outline: none;
+}
+
+.checkIcon {
+  width: 36px;
+}
+
+.left {
+  align-self: flex-start;
 }

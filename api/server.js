@@ -23,6 +23,12 @@ app.post("/upload", multer({ storage: storage }).single("file"), (req, res) => {
         imageUrl: `/image/${req.file.filename}`,
       },
     });
+  } else {
+    return res.status(204).json({
+      response: {
+        msg: "No file uploaded",
+      },
+    });
   }
 });
 
