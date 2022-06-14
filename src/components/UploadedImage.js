@@ -3,7 +3,7 @@ import checkicon from "../assets/check-icon.jpg";
 import toast from "react-hot-toast";
 
 function UploadedImage({ imageUrl }) {
-  const uri = `http://localhost:8080${imageUrl}`;
+  const uri = `https://img-uploader-api.herokuapp.com${imageUrl}`;
   const copyButton = useRef();
 
   useEffect(() => {
