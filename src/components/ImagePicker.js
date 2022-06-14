@@ -34,22 +34,27 @@ function ImagePicker({ setImageUrl, setLoader }) {
 
   const UploadImage = async (file) => {
     setLoader(true);
-    const formData = new FormData();
-    formData.append("file", file, file.name);
-    await axios
-      .post("http://localhost:8080/upload", formData)
-      .then((res) => {
-        res.data.response.msg === "file uploaded" &&
-          setImageUrl(res.data.response.imageUrl);
-        res.data.response.msg === "No file uploaded" &&
-          toast.error("Aucun fichier téléchargé !");
-      })
-      .catch((err) => {
-        console.log("erreur");
-        err.message === "Network Error"
-          ? toast.error("Erreur réseau !")
-          : toast.error("Veillez vérifier votre connexion et réessayer");
-      });
+    if (file["type"].split("/")[0] === "image") {
+      const formData = new FormData();
+      formData.append("file", file, file.name);
+      await axios
+        .post("http://localhost:8080/upload", formData)
+        .then((res) => {
+          res.data.response.msg === "file uploaded" &&
+            setImageUrl(res.data.response.imageUrl);
+          res.data.response.msg === "No file uploaded" &&
+            toast.error("Aucun fichier téléchargé !");
+        })
+        .catch((err) => {
+          console.log("erreur");
+          err.message === "Network Error"
+            ? toast.error("Erreur réseau !")
+            : toast.error("Veillez vérifier votre connexion et réessayer");
+        });
+    } else {
+      toast.error("Le fichier téléchargé n'est pas une image ");
+    }
+
     setLoader(false);
   };
 
