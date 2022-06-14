@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import checkicon from "../assets/check-icon.jpg";
-import showMessage from "../components/ShowMessage";
+import toast from "react-hot-toast";
 
 function UploadedImage({ imageUrl }) {
   const uri = `http://localhost:8080${imageUrl}`;
@@ -9,8 +9,11 @@ function UploadedImage({ imageUrl }) {
   useEffect(() => {
     copyButton.current.addEventListener("click", () => {
       navigator.clipboard.writeText(uri);
+      notify();
     });
-  }, []);
+  });
+
+  const notify = () => toast.success("copié !");
 
   return (
     <>

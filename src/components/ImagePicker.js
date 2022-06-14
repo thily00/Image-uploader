@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import imagePlaceholder from "../assets/image.svg";
+import toast from "react-hot-toast";
 import axios from "axios";
 
 function ImagePicker({ setImageUrl, setLoader }) {
@@ -41,13 +42,13 @@ function ImagePicker({ setImageUrl, setLoader }) {
         res.data.response.msg === "file uploaded" &&
           setImageUrl(res.data.response.imageUrl);
         res.data.response.msg === "No file uploaded" &&
-          alert("Aucun fichier téléchargé");
+          toast.error("Aucun fichier téléchargé !");
       })
       .catch((err) => {
         console.log("erreur");
-        // err.message == "Network Error"
-        //   ? alert("Erreur réseau")
-        //   : alert("Veillez vérifier votre connexion et réessayer");
+        err.message === "Network Error"
+          ? toast.error("Erreur réseau !")
+          : toast.error("Veillez vérifier votre connexion et réessayer");
       });
     setLoader(false);
   };

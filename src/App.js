@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ImageUploader from "./components/ImageUploader";
 import UploadedImage from "./components/UploadedImage";
+import { Toaster } from "react-hot-toast";
 
 import "./App.css";
 
@@ -16,6 +17,7 @@ function App() {
           <ImageUploader setImageUrl={setImageUrl} />
         )}
       </div>
+      <Toaster />
     </div>
   );
 }
