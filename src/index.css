@@ -136,3 +136,23 @@ button:hover {
 .left {
   align-self: flex-start;
 }
+
+@media screen and (max-width: 480px) {
+  .uploader {
+    width: 300px;
+  }
+  .drag-area,
+  .uploaded__image {
+    width: 238px;
+  }
+  .drag-area img {
+    width: 110px;
+  }
+  .imageurl input {
+    width: 59%;
+    font-size: 12px;
+  }
+  .imageurl {
+    padding: 3px;
+  }
+}
