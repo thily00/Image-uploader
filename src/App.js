@@ -15,6 +15,10 @@ function App() {
           <ImageUploader setImageUrl={setImageUrl} />
         )}
       </div>
+      <footer>
+        created by <a href="https://github.com/thily00">Thily</a> -
+        devChallenges.io
+      </footer>
       <Toaster />
     </div>
   );
