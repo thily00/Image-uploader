@@ -82,4 +82,4 @@ $ npm start
 ## Contact
 
 - Website [your-website.com](https://thilyweather.netlify.com/)
-- GitHub [@your-username](https://github.com/thily00)
+- GitHub [@thily00](https://github.com/thily00)
