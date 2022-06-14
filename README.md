@@ -11,10 +11,10 @@
     <a href="https://thily-img-uplodaer.netlify.app/">
       Demo
     </a>
-    <!--<span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <span> | </span>
+    <a href="https://devchallenges.io/solutions/oI7T6AqtDFKYqhT3g49S">
       Solution
-    </a>-->
+    </a>
     <span> | </span>
     <a href="https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx">
       Challenge
