@@ -18,9 +18,12 @@ const BorderLinearProgress = styled(LinearProgress)(() => ({
 
 function ProgressBar() {
   return (
-    <Box sx={{ width: "100%" }}>
-      <BorderLinearProgress variant="indeterminate" />
-    </Box>
+    <>
+      <h1 className="uploader__title">Uploading...</h1>
+      <Box sx={{ width: "100%" }}>
+        <BorderLinearProgress variant="indeterminate" />
+      </Box>
+    </>
   );
 }
 

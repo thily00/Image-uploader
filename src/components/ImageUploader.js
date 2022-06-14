@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react";
+import ProgressBar from "./ProgressBar";
 import imagePlaceholder from "../assets/image.svg";
-import ProgressBar from "../components/ProgressBar";
 import axios from "axios";
 
-function ImageUploader() {
+function ImageUploader({ setImageUrl }) {
   const [loader, setLoader] = useState(false);
 
   const dropArea = useRef();
@@ -34,14 +34,16 @@ function ImageUploader() {
     });
   }, []);
 
-  const UploadImage = (file) => {
+  const UploadImage = async (file) => {
     setLoader(true);
     const formData = new FormData();
     formData.append("file", file, file.name);
-    axios
+    await axios
       .post("http://localhost:8080/upload", formData)
       .then((res) => {
-        console.log(res);
+        res.data.response.msg == "file uploaded" &&
+          setImageUrl(res.data.response.imageUrl);
+        console.log(res.data.response.imageUrl);
       })
       .catch((err) => {
         console.error(err);
@@ -62,10 +64,7 @@ function ImageUploader() {
       <button ref={chooseButton}>Choose File</button>
     </>
   ) : (
-    <>
-      <h1 className="uploader__title">Uploading...</h1>
-      <ProgressBar />
-    </>
+    <ProgressBar />
   );
 }
 
