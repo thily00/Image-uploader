@@ -31,7 +31,6 @@
 - [Features](#features)
 - [How to use](#how-to-use)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 
@@ -78,8 +77,8 @@ $ npm install
 
 # add .env file in the root of your project:
 
-# put your API URL on .env file like below
-$ REACT_APP_BACKEND_URL = 'https://yourdomainename.com'
+# put your API URL on .env file like the example below
+$ REACT_APP_BACKEND_URL = 'https://www.yourdomainename.com'
 
 # Run the app
 $ npm start
