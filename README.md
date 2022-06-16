@@ -70,7 +70,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/thily00/Image-uploader.git
 
 # Install dependencies
 $ npm install
@@ -86,5 +86,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://thilyweather.netlify.com/)
+- Website [dbathily.netlify.app](http://dbathily.netlify.app/)
 - GitHub [@thily00](https://github.com/thily00)
